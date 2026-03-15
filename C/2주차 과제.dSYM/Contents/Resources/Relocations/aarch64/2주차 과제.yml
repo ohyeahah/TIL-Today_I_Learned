@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/yujungseo/C/2주차 과제"
+relocations:     []
+...
