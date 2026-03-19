@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/yujungseo/TIL/C/Week2_20250B216'
+relocations:     []
+...
