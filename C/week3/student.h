@@ -1,67 +1,30 @@
-#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX_STUDENT_NUM 10
+
 typedef struct {
-    char name[20];
-    char university[20];
-    char major[20];
-    int grade;
-    int age;
-    char region[20];
+    char name[10];      // 이름
+    char university[20]; // 대학명
+    char major[20];     // 전공
+    int year;           // 학년
+    int age;            // 나이
+    char city[10];      // 소재지
 } Student;
 
-Student students[100];
-int studentCount = 0;
+// 초기화 함수
+void InitStudent(void);
 
-void InitStudent() {
-    studentCount = 0;
-}
+// 한 줄 텍스트 및 구분자 입력
+void InputStudentData(char* data, const char* delimiter);
 
-void InputStudentData(char* data, const char* delimiter) {
-    char temp[64];
-    strcpy(temp, data);
+// 입력된 학생 수 반환
+int GetStudentCount(void);
 
-    char* token;
-    token = strtok(temp, delimiter);
-    strcpy(students[studentCount].name, token);
+// 입력 인덱스를 찾아 인덱스 반환, 없으면 -1 반환
+int GetStudentIndex(const char* name);
 
-    token = strtok(NULL, delimiter);
-    strcpy(students[studentCount].university, token);
-
-    token = strtok(NULL, delimiter);
-    strcpy(students[studentCount].major, token);
-
-    token = strtok(NULL, delimiter);
-    students[studentCount].grade = atoi(token);
-
-    token = strtok(NULL, delimiter);
-    students[studentCount].age = atoi(token);
-
-    token = strtok(NULL, delimiter);
-    strcpy(students[studentCount].region, token);
-
-    studentCount++;
-}
-
-int GetStudentCount() {
-    return studentCount;
-}
-
-void PrintStudent(const char* name) {
-    for (int i = 0; i < studentCount; i++) {
-        if (strcmp(students[i].name, name) == 0) {
-            printf("%s(%d세) : %s지역 %s %s과 %d학년\n",
-                students[i].name,
-                students[i].age,
-                students[i].region,
-                students[i].university,
-                students[i].major,
-                students[i].grade);
-            return;
-        }
-    }
-    printf("%s는 존재하지 않는 학생입니다.\n", name);
-}
+// 해당 인덱스에 해당하는 구조체 포인터 반환, 인덱스가 NULL이면 NULL 반환
+const Student* GetStudent(int index);
