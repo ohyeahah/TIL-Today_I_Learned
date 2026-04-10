@@ -1,4 +1,4 @@
-#include "StackArrayInt.h"
+#include "StackArrayInt.hpp"
 #define MAX_STACK_SIZE 5
 
 int stack[MAX_STACK_SIZE];
