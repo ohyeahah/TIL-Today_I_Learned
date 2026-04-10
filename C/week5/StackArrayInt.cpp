@@ -4,6 +4,7 @@
 int stack[MAX_STACK_SIZE];
 int top = -1;
 
+
 bool empty()
 {
     return (top == -1);
