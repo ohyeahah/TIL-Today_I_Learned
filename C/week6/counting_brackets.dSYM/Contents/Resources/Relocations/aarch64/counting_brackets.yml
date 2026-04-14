@@ -1,5 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/yujungseo/TIL/C/week5/matrix'
+binary-path:     '/Users/yujungseo/TIL/C/week6/counting_brackets'
 relocations:     []
 ...
