@@ -1,5 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/yujungseo/TIL/C/array3'
+binary-path:     '/Users/yujungseo/TIL/C/week8/lab2'
 relocations:     []
 ...

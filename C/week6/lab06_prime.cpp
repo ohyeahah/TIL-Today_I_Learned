@@ -27,5 +27,5 @@ int main(void)
             printf("%d는 소수(prime)입니다.\n", number);
             break;
     }
-        
+   return 0;     
 }
